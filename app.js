@@ -26,7 +26,14 @@ app.get('/', function (req, res) {
 })
 
 app.listen(3000, function () {
+<<<<<<< HEAD
   console.log('Estas escuhando en el puerto 3000')
 })
 
 //hola soy Julian 2
+=======
+  console.log("Estas escuhando en el puerto 3000");
+});
+
+console.log("Hola, soy jakie");
+>>>>>>> 1a9bf5a22881ac82f2786b532fa003beb05f385d
