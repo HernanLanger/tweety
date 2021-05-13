@@ -32,5 +32,3 @@ app.use('/', routes)
 app.listen(3000, function () {
   console.log('Estas escuhando en el puerto 3000')
 })
-
-//hola soy Julian 2
