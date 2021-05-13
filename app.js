@@ -1,3 +1,5 @@
+const routes = require('./routes')
+
 const express = require('express')
 const morgan = require('morgan') //middleware application logger
 const nunjucks = require('nunjucks')
@@ -12,28 +14,23 @@ nunjucks.configure('views') // apunta a nunjucks al directorio correcto para los
 app.use(morgan('tiny'))
 app.use(express.static('./public'))
 
-let tweetsDeEjemplo = [
-  { id: 1, name: 'juan', content: 'este es un tweeettt de juan' },
-  { id: 2, name: 'carlos', content: 'este es un tweeettt de carlos' },
-  { id: 3, name: 'pepe', content: 'este es un tweeettt de pepe' },
-]
+app.use('/', routes)
+
+// let tweetsDeEjemplo = [
+//   { id: 1, name: 'juan', content: 'este es un tweeettt de juan' },
+//   { id: 2, name: 'carlos', content: 'este es un tweeettt de carlos' },
+//   { id: 3, name: 'pepe', content: 'este es un tweeettt de pepe' },
+// ]
 // app.get("/stylesheets/style.css", function (req, res) {
 //   res.sendFile(__dirname + "/public/stylesheets/style.css");
 // });
 
-app.get('/', function (req, res) {
-  res.render('index', { tweets: tweetsDeEjemplo })
-})
+// app.get('/', function (req, res) {
+//   res.render('index', { tweets: tweetsDeEjemplo })
+// })
 
 app.listen(3000, function () {
-<<<<<<< HEAD
   console.log('Estas escuhando en el puerto 3000')
 })
 
 //hola soy Julian 2
-=======
-  console.log("Estas escuhando en el puerto 3000");
-});
-
-console.log("Hola, soy jakie");
->>>>>>> 1a9bf5a22881ac82f2786b532fa003beb05f385d
